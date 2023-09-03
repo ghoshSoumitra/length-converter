@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="masti">
+        <div id="name">
+            <h3>
+                Enter Your Name:
+           </h3>
+          <input type="text" id="input">
+          <button onclick="mastiname()">Submit</button>
+        </div>
+       
+       <div id="mastiwrite">
+        <div class="add">
+            <h4 id="para"></h4>
+            <input type="text" id="continueinput">
+            <button onclick="continueconverter()">submit</button>
+        </div>
+    
+       </div>
+    </div>
+  
+    <div id="main">
+        <div class="undermain">
+    
+        <div class="options">
+            <div class="option1">
+                <h4 style="margin-left: 1vw;">From:</h4>
+                <select id="option-from">
+                    <option >inch</option>
+                    <option >cm</option>
+                    <option >ft</option>
+                </select>
+            </div>
+         <duv class="option1" >
+            <h4 style="margin-left: 1vw;">To:</h4>
+            <select id="option-to" >
+                <option >inch</option>
+                <option >cm</option>
+                <option >ft</option>
+            </select>
+         </duv>
+           
+        </div>
+        <div class="inputarea">
+            <input type="number" placeholder="Enter Length" id="length">
+            <button onclick="converter()">Convert</button>
+        </div>
+        <div id="result">
+            <h4 id="res" style="margin-left: 6vw;">
+
+            </h4>
+        </div>
+                
+    </div>
+    </div>
+    <script>
+        let inputval;
+       
+        function mastiname(){
+            let input=document.getElementById('input')
+            let name=document.getElementById('name')
+            let write=document.getElementById('mastiwrite')
+            let para=document.getElementById('para');
+            var body=document.body
+            inputval=input.value;
+            console.log(inputval)
+            name.style.display="none"
+            write.style.display="block"
+            para.innerText="Now write this to continue:" + " "+inputval+" "+"is a mahan idiot";
+            body.style.backgroundImage = 'url("https://wallpapercave.com/wp/wp5530208.jpg")';
+
+        }
+        function continueconverter(){
+            var continueinput=document.getElementById('continueinput')
+            var main=document.getElementById('main')
+            let write=document.getElementById('mastiwrite')
+            var continueinputval=continueinput.value;
+            console.log(inputval)
+            if(continueinputval===inputval+" "+"is a mahan idiot"){
+                main.style.display="block";
+                write.style.display="none"
+            }
+            var body=document.body;
+            var main=document.getElementById('main');
+            main.style.display="flex"
+            body.style.backgroundImage = 'url("https://images3.alphacoders.com/853/85305.jpg")';
+        }
+        function converter(){
+            var option1=document.getElementById('option-from');
+            var option2=document.getElementById('option-to');
+            var result=document.getElementById('result');
+            var res=document.getElementById('res')
+            var length=document.getElementById('length')
+            var lengthval=length.value
+            var option1val=option1.value;
+            var option2val=option2.value;
+          
+            result.style.display="block"
+            if(option1val==="cm" && option2val==="inch"){
+                let i=lengthval/2.54;
+                res.innerText="converted length is:"+i.toFixed(2) +"inch"
+            }
+            else if(option1val==="inch" && option2val==="cm"){
+                let c=lengthval*2.54;
+                res.innerText="converted length is:"+c.toFixed(2) +"cm"
+            }
+            else if(option1val==="cm" && option2val==="ft"){
+                let f=lengthval/30.48;
+                res.innerText="converted length is:"+f.toFixed(2) +"ft"
+            }
+            else if(option1val==="ft" && option2val==="cm"){
+                let c=lengthval*30.48;
+                res.innerText="converted length is:"+c.toFixed(2) +"cm"
+            }
+            else if(option1val==="inch" && option2val==="ft"){
+                let i=lengthval/12;
+                res.innerText="converted length is:"+i.toFixed(2) +"ft"
+            }
+            else if(option1val==="ft" && option2val==="inch"){
+                let f=lengthval*12;
+                res.innerText="converted length is:"+f.toFixed(2) +"inch"
+            }
+
+        }
+    </script>
+</body>
+</html>

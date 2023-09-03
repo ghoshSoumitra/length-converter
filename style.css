@@ -1,0 +1,102 @@
+body{
+    background: url('https://c4.wallpaperflare.com/wallpaper/887/641/129/smile-happiness-ball-backlight-wallpaper-preview.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#main{
+    display: none;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    width: 99vw;
+ 
+}
+.undermain{
+    background-color: #ffffff3d;
+    box-shadow: 4px 4px 8px white,
+                -4px -4px 8px white;
+    height: 40vh;
+    width: 35vw;
+    padding-left: 3vw;
+    border-radius: 20px;
+    border: none;
+}
+#mastiwrite{
+    display: none;
+}
+h3,h4{
+    color: white;
+    margin-left: 7vw;
+    text-shadow: 3px 3px 5px gold;
+    font-size: 1.5rem;
+}
+#para{
+    color: white;
+    margin-left: -2vw;
+    text-shadow: 3px 3px 5px gold;
+    font-size: 1.5rem;
+}
+.masti{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+#name{
+    display: flex;
+    flex-direction: column;
+}
+#input,#continueinput,#length{
+    height: 7vh;
+    width: 30vw;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 4px 4px 8px white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+button{
+    height: 7vh;
+    width: 30vw;
+    border-radius: 20px;
+    background-color: blue;
+    border: none;
+    box-shadow: 4px 4px 8px white;
+    color: white;
+    font-size: 1.3rem;
+}
+.add{
+    display: flex;
+    flex-direction: column;
+}
+#option-from,#option-to{
+    height: 5vh;
+    width: 10vw;
+    margin-top: 4vh;
+    border-radius: 20px;
+    text-align: center;
+}
+.option1{
+    display: flex;
+}
+.options{
+    display: flex;
+}
+.inputarea{
+    display: flex;
+    flex-direction: column;
+}
+#result{
+    background-color: #ffffff3d;
+    height: 5vh;
+    width: 33vw;
+    border-radius: 20px;
+    border: none;
+    margin-left: -1vw;
+    display: none;
+    box-shadow: 4px 4px 8px white
+             
+}
